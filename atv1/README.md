@@ -18,12 +18,12 @@ Fizemos o algoritmo no código:
 ## Resultados
 data_or:
 <p align="center">
-   <img width="600" src="imagens/data_or">
+   <img width="600" src="imagens/data_or_percent.jpeg">
 </p>
 
 data_xor:
 <p align="center">
-   <img width="600" src="imagens/data_xor">
+   <img width="600" src="imagens/data_xor_percent.jpeg">
 </p>
 
 Uma observação é que ao executarmos o código, também temos o resultado em porcentagem:
