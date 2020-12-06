@@ -80,7 +80,7 @@ def adiciona_1_matriz(matriz, bies):
 X = []
 y = []
 
-arq_address = r'dados/data_or.dat'
+arq_address = r'dados/data_xor.dat'
 f = open(arq_address,"r")
 row = f.readline().replace('\n','')
 while row:
@@ -93,6 +93,7 @@ while row:
 f.close()
 
 X = adiciona_1_matriz(X, 1)
+print(X[0])
 # --------------------------------------------------------------------------
 
 #Aula 2
@@ -106,6 +107,7 @@ for i in range(len(X[0])):
     else:
         W.append(0)
 
+# print(W)
 # --------------------------------------------------------------------------
 
 # efetuando o treinamento do Perceptron ------------------------------------
@@ -136,18 +138,20 @@ for t in range(T):
 # plotagem da superfície de decisão (dados + hiperplano) -------------------
 # transferindo toda coluna (feature) para um array
 
-# exemples_in_column = []
-# for j in range(len(X[0])):
-#     ex = []
-#     for i in range(len(X)):
-#         ex.append(X[i][j])
-#     exemples_in_column.append(ex)
+exemples_in_column = []
+for j in range(len(X[0])):
+    ex = []
+    for i in range(len(X)):
+        ex.append(X[i][j])
+    exemples_in_column.append(ex)
+
+plt.scatter(exemples_in_column[1], exemples_in_column[2], c = y_train)
 
 # plt.scatter(exemples_in_column[0], y_train)
 # plt.scatter(exemples_in_column[1], y_train)
 # plt.plot(W, [0,0])
 
-# plt.show()
+plt.show()
 # --------------------------------------------------------------------------
 
 # acerto(%) das predições treinadas em relação as reais usadas para o treino
