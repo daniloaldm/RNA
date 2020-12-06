@@ -80,7 +80,7 @@ def adiciona_1_matriz(matriz, bies):
 X = []
 y = []
 
-arq_address = r'dados/data_xor.dat'
+arq_address = r'dados/data_or.dat'
 f = open(arq_address,"r")
 row = f.readline().replace('\n','')
 while row:
@@ -157,3 +157,9 @@ plt.show()
 # acerto(%) das predições treinadas em relação as reais usadas para o treino
 print("score:", score(y_train, y))
 # --------------------------------------------------------------------------
+
+#Percepton é feito para classificar dados linearmente divisíveis, notamos que o arquivo data_or.dat 
+#respeita essa característica, já o data_xor.dat não. Ao plotar o gráfico fica visível essa anotação.
+
+# https://youtu.be/oud8BZ4ZEac?list=PLh7r2qrOFSigm_MHanQIm4tiAojj1OUvR&t=364
+# https://pt.wikipedia.org/wiki/Perceptron_multicamadas#Perceptron
