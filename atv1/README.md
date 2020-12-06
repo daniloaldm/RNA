@@ -9,7 +9,7 @@ Considerando o algoritmo:
    <img width="600" src="imagens/algoritmo_perceptron.jpeg">
 </p>
 
-Algoritmo no código:
+Fizemos o algoritmo no código:
 <p align="center">
    <img width="600" src="imagens/treinamento.jpeg">
 </p>
