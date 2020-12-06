@@ -25,5 +25,3 @@ data_xor:
 <p align="center">
    <img width="600" src="imagens/data_xor_percent.jpeg">
 </p>
-
-Uma observação é que ao executarmos o código, também temos o resultado em porcentagem:
