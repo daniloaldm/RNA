@@ -2,7 +2,7 @@
 
 Perceptron é uma rede neural de camada única e um Perceptron de várias camadas é chamado de Rede Neural Artificial. O Perceptron é um classificador linear (binário). Além disso, é usado na aprendizagem supervisionada e pode ser usado para classificar os dados de entrada fornecidos.
 
-Considerando o classificador Perceptron discutido na disciplina, realizamos o treinamento do Perceptron e plotamos os dados para cada um dos <a href="https://github.com/daniloaldm/RNA/tree/main/atv1/dados">datasets fornecidos</a>, que possuiam amostras de treinamento para problemas de classificação binária com X = R^2 e Y = {−1, 1}.
+Considerando o classificador Perceptron discutido na disciplina, realizamos o treinamento do Perceptron e plotamos os dados para cada um dos <a href="https://github.com/daniloaldm/RNA/tree/main/atv1/dados">datasets fornecidos</a>, que possuiam amostras de treinamento para problemas de classificação binária com X = R² e Y = {−1, 1}.
 
 Os dados estão na forma de
 
