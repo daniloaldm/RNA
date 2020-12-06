@@ -96,7 +96,6 @@ while row:
 f.close()
 
 X = adiciona_1_matriz(X, 1)
-# print(X[0])
 # --------------------------------------------------------------------------
 
 #Aula 2
@@ -110,7 +109,6 @@ for i in range(len(X[0])):
     else:
         W.append(0)
 
-# print(W)
 # --------------------------------------------------------------------------
 
 # efetuando o treinamento do Perceptron ------------------------------------
@@ -149,18 +147,12 @@ for j in range(len(X[0])):
     exemples_in_column.append(ex)
 
 # plt.scatter(exemples_in_column[1], exemples_in_column[2], c = y_train)
-
-# plt.scatter(exemples_in_column[0], y_train)
-# plt.scatter(exemples_in_column[1], y_train)
-# plt.plot(W, [0,0])
-
 # plt.show()
 
 data = pd.read_csv(FILE, delimiter="\s+", header=None, engine='python')
 X = data.iloc[:, :2].values
 y = data.iloc[:, -1].values
 
-# substituir aqui?
 x1 = X[:, 0]
 x2 = X[:, 1]
 
@@ -179,4 +171,3 @@ print("score:", score(y_train, y))
 #respeita essa característica, já o data_xor.dat não. Ao plotar o gráfico fica visível essa anotação.
 
 # https://youtu.be/oud8BZ4ZEac?list=PLh7r2qrOFSigm_MHanQIm4tiAojj1OUvR&t=364
-# https://pt.wikipedia.org/wiki/Perceptron_multicamadas#Perceptron
