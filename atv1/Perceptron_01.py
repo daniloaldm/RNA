@@ -96,14 +96,17 @@ f.close()
 
 #Aula 2
 # pesos de conexão ---------------------------------------------------------
-X = adiciona_bies_matriz(X, bies)
 W = []
 # para cada coluna (feature), adiciono pesos Wi
 for i in range(len(X[0])):
-    W.append(0) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
+    if(i==0):
+        W.append(1)
+    else:
+        W.append(0) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
 
 # bies
 bies = W[0]
+X = adiciona_bies_matriz(X, bies)
 # print(X)
 
 # --------------------------------------------------------------------------
