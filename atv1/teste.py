@@ -24,7 +24,7 @@ def cria_matriz_com_bies(num_linhas, num_colunas, bies):
         matriz.append(linha)
     return matriz
 
-def adiciona_bies_matriz(matriz, bies):
+def adiciona_1_matriz(matriz, bies):
     new_mtz = cria_matriz_com_bies(len(matriz), len(matriz[0])+1, bies)
     for i in range(len(new_mtz)):
         for j in range(len(new_mtz[0])-1):
@@ -33,4 +33,4 @@ def adiciona_bies_matriz(matriz, bies):
 
 
 print(X,'\n')
-print(adiciona_bies_matriz(X, 1))
+print(adiciona_1_matriz(X, 1))

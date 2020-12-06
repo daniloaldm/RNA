@@ -68,7 +68,7 @@ def cria_matriz_com_bies(num_linhas, num_colunas, bies):
         matriz.append(linha)
     return matriz
 
-def adiciona_bies_matriz(matriz, bies):
+def adiciona_1_matriz(matriz, bies):
     new_mtz = cria_matriz_com_bies(len(matriz), len(matriz[0])+1, bies)
     for i in range(len(new_mtz)):
         for j in range(len(new_mtz[0])-1):
@@ -92,22 +92,19 @@ while row:
     row = f.readline().replace('\n', '')
 f.close()
 
+X = adiciona_1_matriz(X, 1)
 # --------------------------------------------------------------------------
 
 #Aula 2
 # pesos de conexão ---------------------------------------------------------
 W = []
+bies = 0
 # para cada coluna (feature), adiciono pesos Wi
 for i in range(len(X[0])):
     if(i==0):
-        W.append(1)
+        W.append(bies) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
     else:
-        W.append(0) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
-
-# bies
-bies = W[0]
-X = adiciona_bies_matriz(X, bies)
-# print(X)
+        W.append(0)
 
 # --------------------------------------------------------------------------
 
@@ -139,18 +136,18 @@ for t in range(T):
 # plotagem da superfície de decisão (dados + hiperplano) -------------------
 # transferindo toda coluna (feature) para um array
 
-exemples_in_column = []
-for j in range(len(X[0])):
-    ex = []
-    for i in range(len(X)):
-        ex.append(X[i][j])
-    exemples_in_column.append(ex)
+# exemples_in_column = []
+# for j in range(len(X[0])):
+#     ex = []
+#     for i in range(len(X)):
+#         ex.append(X[i][j])
+#     exemples_in_column.append(ex)
 
-plt.scatter(exemples_in_column[0], y_train)
-plt.scatter(exemples_in_column[1], y_train)
-plt.plot(W, [0,0])
+# plt.scatter(exemples_in_column[0], y_train)
+# plt.scatter(exemples_in_column[1], y_train)
+# plt.plot(W, [0,0])
 
-plt.show()
+# plt.show()
 # --------------------------------------------------------------------------
 
 # acerto(%) das predições treinadas em relação as reais usadas para o treino
