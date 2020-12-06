@@ -23,3 +23,8 @@ data_xor:
 <p align="center">
    <img width="600" src="imagens/data_xor_percent.jpeg">
 </p>
+
+## :man_technologist: Autores
+
+- **Danilo Alexandrino** - [GitHub](https://github.com/daniloaldm) - Email: [danilo.alexandrinodm@gmail.com](mailto:danilo.alexandrinodm@gmail.com)
+- **Antônio Carlos S. F. Júnior** - [GitHub](https://github.com/cacajr) - Email: [espinhado010203@gmail.com](espinhado010203@gmail.com)
