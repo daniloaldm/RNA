@@ -2,7 +2,7 @@ import math
 import pandas as pd
 import matplotlib.pyplot as plt
 
-FILE = "dados/data_or.dat"
+FILE = "dados/data_xor.dat"
 
 # Aula 1
 # funções de ativação -----------------------------------------------------
@@ -60,23 +60,10 @@ def score(v1, v2):
     return hits/len(v1)
 # --------------------------------------------------------------------------
 
-#-----------------------------Manipulando Matrizes--------------------------
-def cria_matriz_com_bies(num_linhas, num_colunas, bies):
-    matriz = []
-    for i in range(num_linhas):
-        linha = []
-        for j in range(num_colunas):
-            linha.append(1)
-
-        matriz.append(linha)
-    return matriz
-
-def adiciona_1_matriz(matriz, bies):
-    new_mtz = cria_matriz_com_bies(len(matriz), len(matriz[0])+1, bies)
-    for i in range(len(new_mtz)):
-        for j in range(len(new_mtz[0])-1):
-            new_mtz[i][j-2]=matriz[i][j]
-    return new_mtz
+# insere uma coluna de values no início da matriz --------------------------
+def add_value_column_matriz(matriz, value):
+    for i in range(len(matriz)):
+        matriz[i].insert(0, value)
 #---------------------------------------------------------------------------
 
 # coletando os dados de entada X e y ---------------------------------------
@@ -95,7 +82,8 @@ while row:
     row = f.readline().replace('\n', '')
 f.close()
 
-X = adiciona_1_matriz(X, 1)
+# adicionando coluna de 1's em X (como a primeira coluna)
+add_value_column_matriz(X, 1)
 # --------------------------------------------------------------------------
 
 #Aula 2
@@ -104,18 +92,17 @@ W = []
 bies = 0
 # para cada coluna (feature), adiciono pesos Wi
 for i in range(len(X[0])):
-    if(i==0):
-        W.append(bies) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
+    if(i == 0):
+        W.append(bies) 
     else:
-        W.append(0)
-
+        W.append(0) # pode ser randomizado (intervalor de -1 até 1, por exemplo)
 # --------------------------------------------------------------------------
 
 # efetuando o treinamento do Perceptron ------------------------------------
 # predições treinadas
 y_train = []
 # número de iterações t do treinamento
-T = 5
+T = 200
 for t in range(T):
     # guardara as predições em treinamento
     y_training = []
@@ -137,18 +124,6 @@ for t in range(T):
 
 #Aula 3
 # plotagem da superfície de decisão (dados + hiperplano) -------------------
-# transferindo toda coluna (feature) para um array
-
-exemples_in_column = []
-for j in range(len(X[0])):
-    ex = []
-    for i in range(len(X)):
-        ex.append(X[i][j])
-    exemples_in_column.append(ex)
-
-# plt.scatter(exemples_in_column[1], exemples_in_column[2], c = y_train)
-# plt.show()
-
 data = pd.read_csv(FILE, delimiter="\s+", header=None, engine='python')
 X = data.iloc[:, :2].values
 y = data.iloc[:, -1].values
