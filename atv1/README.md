@@ -31,7 +31,7 @@ data_or:
 
 data_xor:
 <p align="center">
-   <img width="600" src="imagens/data_xor_percent.jpeg">
+   <img width="600" src="imagens/data_xor_percent2.jpeg">
 </p>
 
 Para mais informações basta verificar o <a href="https://github.com/daniloaldm/RNA/blob/main/atv1/Perceptron_01.py">código</a>, colocamos vários comentários para auxiliar o entendimento.
