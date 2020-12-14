@@ -21,3 +21,8 @@ Para executar os arquivos:
 cd atv1
 python3 nome_do_arquivo.py
 ```
+Para executar os arquivos no jupiter:
+```
+cd atv1
+jupyter-lab
+```
