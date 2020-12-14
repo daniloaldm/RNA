@@ -19,7 +19,7 @@ pip3 install -r requirements.txt
 Para executar os arquivos:
 ```
 cd atv1
-python3 nome_do_arquivo.py
+python3 Perceptron_01.py
 ```
 Para executar os arquivos no jupiter:
 ```
