@@ -24,5 +24,5 @@ python3 Perceptron_01.py
 Para executar os arquivos no jupiter:
 ```
 cd atv1
-jupyter-lab
+../bin/jupyter-notebook
 ```
